@@ -2,8 +2,15 @@
 <html>
   <head>
     <title>A Coder's Page</title>
+    <script type="text/javascript">
+      function onLoad(){
+        var pdf = document.getElementById("pdf");
+        pdf.setAttribute("width", window.innerWidth);
+        pdf.setAttribute("height", window.innerHeight);
+      }
+    </script>
   </head>
-  <body style="border:0px; padding:0px">
-    <embed src="Resume.pdf" type="application/pdf" style="width:100vw; height:100vh">
+  <body style="border:0px; padding:0px" onload="onLoad">
+    <embed id="pdf" src="Resume.pdf" type="application/pdf">
   </body>
 </html>
